@@ -1,6 +1,6 @@
 {
   "name": "grunt-sprites",
-  "description": "Generate sprites separeted by folders, with spritesmith",
+  "description": "Generate sprites separated by folders, with spritesmith",
   "version": "0.1.0",
   "homepage": "https://github.com/serheyShmyg/sprites",
   "author": {
