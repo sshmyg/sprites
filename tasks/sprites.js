@@ -8,19 +8,21 @@
 
 'use strict';
 
-var nodeDir = require('node-dir');
+var nodeDir = require('node-dir'),
+	gruntSpritesmith = require('grunt-spritesmith');
 
 module.exports = function(grunt) {
-	grunt.loadNpmTasks('grunt-spritesmith');
-
 	var defaults = {
-		configParamName :'all',
-		imgType : ['png']
-	};
+			configParamName :'all',
+			imgType : ['png']
+		};
+
+	gruntSpritesmith(grunt);
 
 	grunt.registerTask('sprites', 'Generate sprites separeted by folders, with spritesmith', function() {
+
 		var options = this.options(),
-			done = this.async,
+			done = this.async(),
 			imageType = options.imgType || defaults.imgType,
 			folderIndex, folderName, spritesmithConf;
 
@@ -31,7 +33,11 @@ module.exports = function(grunt) {
 		grunt.config('sprite', {});
 
 		nodeDir.subdirs(options.baseDir, function(err, subdirs) {
-			if (err) throw err;
+			if (err) {
+				grunt.log.error(err);
+				done();
+				return false;
+			}
 
 			subdirs.forEach(function(src, i) {
 				folderIndex = src.lastIndexOf('/') !== -1 ? src.lastIndexOf('/') : src.lastIndexOf('\\');
