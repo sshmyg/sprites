@@ -1,6 +1,6 @@
 # grunt-sprites
 
-> Generate sprites separeted by folders, with [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith).
+> Generate sprites separated by folders, with [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith).
 Main idea is generate files in separate folders.
 It's a wrapper for [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith).
 
