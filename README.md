@@ -29,7 +29,17 @@ grunt.initConfig({
   sprites: {
     options: {
       baseDir : 'path/to/dir/with/subdirs',
-      imgType : 'png, jpeg'
+      imgType : ['png, jpeg'],
+      initSpritesmithConfig : initSpritesmithConfig : function(folderName) {
+        return {
+          //src : '', NO NEED
+          engine : 'pngsmith',
+          cssTemplate: 'app/css/less.template.mustache',
+          destImg : 'app/images/sprites/' + folderName + '.png',
+          destCSS : 'app/css/less/' + folderName + '.less',
+          cssFormat : 'less'
+        };
+      }
     }
   },
 });
@@ -70,10 +80,6 @@ Returns object with [grunt-spritesmith](https://github.com/Ensighten/grunt-sprit
 Param __SRC__ NO NEEDED, and all other options are supports.
 
 ### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
 ```js
 grunt.initConfig({
   sprites : {
