@@ -33,10 +33,10 @@ module.exports = function(grunt) {
 		grunt.config('sprite', {});
 
 		nodeDir.subdirs(options.baseDir, function(err, subdirs) {
-			if (err) {
-				grunt.log.error(err);
+			if (err || subdirs.length) {
+				grunt.log.error(err || 'No folders');
 				done();
-				return false;
+				return;
 			}
 
 			subdirs.forEach(function(src, i) {
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 				grunt.config('sprite.' + defaults.configParamName + i, spritesmithConf);
 			});
 
-			grunt.task.run(['sprite']);
+			if (!err && subdirs.length) grunt.task.run(['sprite']);
 
 			done();
 		});
