@@ -30,7 +30,8 @@ grunt.initConfig({
     options: {
       baseDir : 'path/to/dir/with/subdirs',
       imgType : ['png, jpeg'],
-      initSpritesmithConfig : initSpritesmithConfig : function(folderName) {
+      //Support all grunt-spritesmith options
+      initSpritesmithConfig : function(folderName) {
         return {
           //src : '', NO NEED
           engine : 'pngsmith',
