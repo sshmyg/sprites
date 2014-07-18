@@ -49,8 +49,8 @@ grunt.initConfig({
 ### Options
 
 #### options.baseDir
-Type: `String`
-Default value: `undefined`
+Type: `String`  
+Default value: `undefined`  
 
 Folder which contain subfolders with sprites images
 SPRITES_FOLDER > 
@@ -65,16 +65,16 @@ SPRITES_FOLDER >
                               image2
 
 #### options.imgType
-Type: `String`
-Default value: `[png]`
+Type: `String`  
+Default value: `[png]`  
 
 Images type (supports all type as [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith) support)
 
 
 #### options.initSpritesmithConfig
-Type: `Function`
-Default value: `undefined`
-Returns value: `Object`
+Type: `Function`  
+Default value: `undefined`  
+Returns value: `Object`  
 
 Spritesmith dynamic configuration;
 Returns object with [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith) configuration.
