@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 		grunt.config('sprite', {});
 
 		nodeDir.subdirs(options.baseDir, function(err, subdirs) {
-			if (err || subdirs.length) {
+			if (err || !subdirs.length) {
 				grunt.log.error(err || 'No folders');
 				done();
 				return;
