@@ -39,7 +39,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "grunt-spritesmith": "^2.1.1",
+    "grunt-spritesmith": "^3.0.0",
     "node-dir": "^0.1.5"
   }
 }
