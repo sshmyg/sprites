@@ -34,10 +34,10 @@ grunt.initConfig({
       initSpritesmithConfig : function(folderName) {
         return {
           //src : '', NO NEED
-          engine : 'pngsmith',
+          engine : 'pixelsmith',
           cssTemplate: 'app/css/less.template.mustache',
-          destImg : 'app/images/sprites/' + folderName + '.png',
-          destCSS : 'app/css/less/' + folderName + '.less',
+          dest : 'app/images/sprites/' + folderName + '.png',
+          destCss : 'app/css/less/' + folderName + '.less',
           cssFormat : 'less'
         };
       }
@@ -90,10 +90,10 @@ grunt.initConfig({
       initSpritesmithConfig : function(folderName) {
         return {
           //src : '', NO NEED
-          engine : 'pngsmith',
+          engine : 'pixelsmith',
           cssTemplate: 'app/css/less.template.mustache',
-          destImg : 'app/images/sprites/' + folderName + '.png',
-          destCSS : 'app/css/less/' + folderName + '.less',
+          dest : 'app/images/sprites/' + folderName + '.png',
+          destCss : 'app/css/less/' + folderName + '.less',
           cssFormat : 'less'
         };
       }
